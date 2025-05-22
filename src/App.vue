@@ -1,4 +1,5 @@
 <script setup>
+import { Analytics } from '@vercel/analytics/vue'
 import { ref, computed, watch, onMounted } from 'vue'
 import chroma from 'chroma-js'
 
@@ -271,6 +272,7 @@ function updateDarkClass() {
 </script>
 
 <template>
+  <Analytics />
   <div class="app-container">
     <header class="site-header">
       <h1>配色生成器<span>快速生成和谐配色方案</span></h1>
@@ -975,17 +977,17 @@ section {
   --vt-c-black-soft: #f8f8f8;
   --vt-c-black-mute: #f2f2f2;
   --vt-c-indigo: #c9def1;
-  
+
   --vt-c-divider-light-1: rgba(84, 84, 84, 0.65);
   --vt-c-divider-light-2: rgba(84, 84, 84, 0.48);
   --vt-c-divider-dark-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-dark-2: rgba(60, 60, 60, 0.12);
-  
+
   --vt-c-text-light-1: #ffffff;
   --vt-c-text-light-2: rgba(235, 235, 235, 0.64);
   --vt-c-text-dark-1: var(--vt-c-indigo);
   --vt-c-text-dark-2: rgba(60, 60, 60, 0.66);
-  
+
   /* 语义变量 */
   --color-background: var(--vt-c-black);
   --color-background-soft: var(--vt-c-black-soft);
@@ -994,7 +996,7 @@ section {
   --color-border-hover: var(--vt-c-divider-dark-1);
   --color-heading: var(--vt-c-text-dark-1);
   --color-text: var(--vt-c-text-dark-2);
-  
+
   /* 应用特定变量 */
   --text-color: #f0f0f0;
   --text-light: #aaa;
