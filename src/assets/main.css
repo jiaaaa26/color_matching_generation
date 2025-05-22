@@ -1,0 +1,47 @@
+@import './base.css';
+
+/* 根组件样式，设置宽度、居中和基础字体 */
+#app {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* 链接和 .green 类的基础样式 */
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+/* 鼠标悬停时链接的背景色变化 */
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* 大屏下的布局优化，body 居中，#app 使用 flex 布局 */
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: flex;
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+/* 主容器样式，内容区域自适应宽度并居中 */
+.app-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
